@@ -38,9 +38,9 @@ function processRawWeatherData(rawData) {
 
 	return {
 		condition: weather.conditions,
-		tempF: weather.temp,
-		tempC: ((weather.temp - 32) * 5) / 9, // fahrenheit to celsius
-		humidity: weather.humidity,
+		tempF: Math.round(weather.temp),
+		tempC: Math.round(((weather.temp - 32) * 5) / 9), // fahrenheit to celsius
+		humidity: Math.round(weather.humidity),
 		time: weather.datetime,
 		location: rawData.address,
 	};
