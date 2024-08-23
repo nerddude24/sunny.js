@@ -10,6 +10,7 @@ searchBtn.addEventListener("click", () => {
 		return;
 	}
 
+	searchInput.value = "";
 	updateData(searchVal);
 });
 
