@@ -10,7 +10,7 @@ searchBtn.addEventListener("click", () => {
 		return;
 	}
 
-	// TODO: display data on the page.
+	updateData(searchVal);
 });
 
 async function getDataFromWeatherApi(location) {
@@ -44,4 +44,11 @@ function processRawWeatherData(rawData) {
 		time: weather.datetime,
 		location: rawData.address,
 	};
+}
+
+async function updateData(location) {
+	const rawData = await getDataFromWeatherApi(location);
+	const data = processRawWeatherData(rawData);
+
+	domHandler.render(data);
 }
