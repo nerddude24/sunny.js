@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
+
 :root {
 	--bg-gradient-deg: 120deg;
 
 	font-size: 24px;
+	font-family: "Roboto", system-ui, sans-serif;
 }
 
 body {
@@ -68,12 +71,13 @@ div#data {
 
 h1#location {
 	font-size: 4rem;
+	font-weight: 900;
 	text-transform: uppercase;
 }
 
 p#time {
 	font-size: 1.25rem;
-	font-weight: 150;
+	font-weight: 100;
 	letter-spacing: 1ch;
 }
 
@@ -92,4 +96,6 @@ div#data-container {
 
 p#condition {
 	font-size: 2rem;
+	font-weight: 400;
+	font-style: italic;
 }
