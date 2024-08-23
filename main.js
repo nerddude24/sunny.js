@@ -42,7 +42,6 @@ function processRawWeatherData(rawData) {
 		tempC: ((weather.temp - 32) * 5) / 9, // fahrenheit to celsius
 		humidity: weather.humidity,
 		time: weather.datetime,
-		precipitation: weather.precip,
 		icon: weather.icon,
 		location: rawData.address,
 	};
