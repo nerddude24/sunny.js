@@ -1,3 +1,18 @@
+const searchInput = document.getElementById("search");
+const searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", () => {
+	const searchVal = searchInput.value.trim();
+	const regexHasNumbers = /\d/;
+
+	if (searchVal == "" || regexHasNumbers.test(searchVal)) {
+		alert("Enter a valid location first!");
+		return;
+	}
+
+	// TODO: display data on the page.
+});
+
 async function getDataFromWeatherApi(location) {
 	try {
 		const res = await fetch(
@@ -7,7 +22,7 @@ async function getDataFromWeatherApi(location) {
 		const data = await res.json();
 		return data;
 	} catch (err) {
-		console.error(err);
+		alert(`An error occurred while fetching data:\n ${err}`);
 		return {};
 	}
 }
